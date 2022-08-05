@@ -1,0 +1,97 @@
+-- Gui to Lua
+-- Version: 3.2
+
+-- Instances:
+
+local ScreenGui = Instance.new("ScreenGui")
+local Frame = Instance.new("ImageLabel")
+local TextButton = Instance.new("TextButton")
+
+--Properties:
+
+ScreenGui.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+ScreenGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+
+Frame.Name = "Frame"
+Frame.Parent = ScreenGui
+Frame.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Frame.BackgroundTransparency = 1.000
+Frame.Position = UDim2.new(0.0098258853, 0, 0.0465987027, 0)
+Frame.Size = UDim2.new(0, 100, 0, 101)
+Frame.Image = "rbxassetid://8751714833"
+
+TextButton.Parent = Frame
+TextButton.BackgroundColor3 = Color3.fromRGB(255, 182, 79)
+TextButton.Position = UDim2.new(0.74000001, 0, -0.287128717, 0)
+TextButton.Size = UDim2.new(0, 43, 0, 36)
+TextButton.Font = Enum.Font.SourceSans
+TextButton.Text = "X"
+TextButton.TextColor3 = Color3.fromRGB(0, 0, 0)
+TextButton.TextScaled = true
+TextButton.TextSize = 14.000
+TextButton.TextWrapped = true
+wait(8)
+TextButton.MouseButton1Down:connect(function()
+    loadstring(game:HttpGet(('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'),true))()
+end)
+
+-- Scripts:
+
+local function DSGGPY_fake_script() -- Frame.LocalScript 
+	local script = Instance.new('LocalScript', Frame)
+
+	local TweenService = game:GetService("TweenService")
+	
+	local frame = script.Parent
+	frame.AnchorPoint = Vector2.new(0.5, 0.5)
+	frame.Position = UDim2.new(0, 70, 0, 70)
+	frame.BorderSizePixel = 0
+	frame.Size = UDim2.new(0, 100, 0, 100)
+	frame.BackgroundColor3 = Color3.new(0, 0, 0)
+	
+	-- Set up tweens
+	local tweenInfo1 = TweenInfo.new(1, Enum.EasingStyle.Sine, Enum.EasingDirection.Out)
+	local tween1 = TweenService:Create(frame, tweenInfo1, {Position=UDim2.new(0.5, 0, 0.5, 0)})
+	local tweenInfo2 = TweenInfo.new(1.5, Enum.EasingStyle.Quart, Enum.EasingDirection.InOut)
+	local tween2 = TweenService:Create(frame, tweenInfo2, {Rotation=180})
+	
+	tween1.Completed:Connect(function()
+		tween2:Play()
+	end)
+	
+	wait(2)
+	
+	tween1:Play()
+end
+coroutine.wrap(DSGGPY_fake_script)()
+local function BLSQXGG_fake_script() -- TextButton.Script 
+	local script = Instance.new('Script', TextButton)
+
+	script.Parent.Parent.Parent.Enabled = true
+	
+	script.Parent.Text = "7"
+	wait(1)
+	script.Parent.Text = "6"
+	wait(1)
+	script.Parent.Text = "5"
+	wait(1)
+	script.Parent.Text = "4"
+	wait(1)
+	script.Parent.Text = "3"
+	wait(1)
+	script.Parent.Text = "2"
+	wait(1)
+	script.Parent.Text = "1"
+	wait(1)
+	script.Parent.Text = "X"
+	wait(1)
+	function Click(mouse)
+	
+		script.Parent.Parent.Parent.Enabled = false
+	
+	end
+	
+	
+	script.Parent.MouseButton1Down:connect(Click)
+end
+coroutine.wrap(BLSQXGG_fake_script)()
